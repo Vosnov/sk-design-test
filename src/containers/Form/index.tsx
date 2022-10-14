@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   padding: 40px 30px;
   width: 440px;
-  background: #FFFFFF;
+  background: var(--color-white);
   box-shadow: 0px 5px 20px rgba(53, 50, 56, 0.14);
   border-radius: 8px;
   gap: 20px;

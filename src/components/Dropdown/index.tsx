@@ -14,8 +14,8 @@ const Select = styled.button<SelectWrapperProps>`
   width: 100%;
   text-align: left;
   padding: 0 15px;
-  background: #FFFFFF;
-  border: 2px solid #E3E3E3;
+  background: var(--color-white);
+  border: 2px solid var(--color-grey2);
   border-radius: 8px;
   position: relative;
   transition: .25s;
@@ -23,16 +23,16 @@ const Select = styled.button<SelectWrapperProps>`
   ${props => {
     if (props.isActive && !props.isError) {
       return `
-        border-color: #0086A8;
+        border-color: var(--color-blue);
         ${Label} {
-          color: #0086A8;
+          color: var(--color-blue);
         }
       `
     }
 
     if (props.isError) {
       return `
-        border-color: #EB5E55;
+        border-color: var(--color-red);
       `
     }
   }}
@@ -43,7 +43,7 @@ const List = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  border: 2px solid #E3E3E3;
+  border: 2px solid var(--color-grey2);
   border-radius: 8px;
   box-shadow: 0px 5px 20px rgba(53, 50, 56, 0.14);
   width: 100%;
@@ -55,14 +55,14 @@ const List = styled.div`
 `
 const ListItem = styled.button`
   &:not(:last-child) {
-    border-bottom: 2px solid #E3E3E3;
+    border-bottom: 2px solid var(--color-grey2);
   }
   padding: 5px 15px;
   font-size: 14px;
   font-weight: 400;
   width: 100%;
   text-align: left;
-  background-color: #FFF;
+  background-color: var(--color-white);
 `
 
 type SelectWrapperProps = Pick<Props, 'isError'> & {
@@ -70,9 +70,9 @@ type SelectWrapperProps = Pick<Props, 'isError'> & {
 }
 
 const Label = styled.p`
-  color: #828282;
+  color: var(--color-grey1);
   padding: 0 5px;
-  background-color: #FFF;
+  background-color: var(--color-white);
   font-size: 12px;
   font-weight: 400;
   position: absolute;
@@ -81,7 +81,7 @@ const Label = styled.p`
 `
 
 const ErrorLabel = styled.p`
-  color: #EB5E55;
+  color: var(--color-red);
   margin-top: 8px;
   font-size: 12px;
   font-weight: 400;

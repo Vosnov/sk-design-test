@@ -19,14 +19,14 @@ const SubTitle = styled.p`
   font-weight: 600;
   font-size: 24px;
   line-height: 150%;
-  color: #353238;
+  color: var(--color-black);
 `
 
-const P = styled.p`
+const Paragraph = styled.p`
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  color: #353238;
+  color: var(--color-black);
 `
 
 export const About = () => {
@@ -34,7 +34,7 @@ export const About = () => {
     <Wrapper>
       <Logo src={LogoImage} alt="logo" />
       <SubTitle>Оставьте заявку и станьте частью нашей команды</SubTitle>
-      <P>
+      <Paragraph>
         Компания SK Design приглашает к взаимовыгодному сотрудничеству креативных дизайнеров, архитекторов и декораторов,
         дизайн-бюро и интерьерные студии — все, кто дизайн интерьера сделали своим призванием. 
         <br />
@@ -46,7 +46,7 @@ export const About = () => {
         Ознакомиться с проектами можете в нашем <Link href='/'>портфолио</Link>. Если Вы оформляете интерьеры жилых или коммерческих помещений
         — мы с радостью поможем Вам: составим уникальные условия сотрудничества, предоставим 3D модели (уточняйте у менеджеров)
         и разработаем коммерческое предложение к Вашему проекту или изображениям.
-      </P>
+      </Paragraph>
     </Wrapper>
   )
 }

@@ -8,8 +8,8 @@ type ButtonProps = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const StyledButton = styled.button<ButtonProps>`
-  color: #FFF;
-  background-color: #0086A8;
+  color: var(--color-white);
+  background-color: var(--color-blue);
   padding: 0 25px;
   height: 50px;
   border-radius: 8px;
@@ -30,8 +30,8 @@ const StyledButton = styled.button<ButtonProps>`
         background-color: #00657E;
       }
       &:disabled {
-        background-color: #E3E3E3;
-        color: #828282
+        background-color: var(--color-grey2);
+        color: var(--color-grey1);
       }
     `
   }}

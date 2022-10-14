@@ -23,6 +23,7 @@ const Label = styled.p`
   font-size: 14px;
   font-weight: 400;
   margin-right: 8px;
+  color: var(--color-black);
 `
 
 const Button = styled.button`

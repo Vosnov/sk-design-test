@@ -8,9 +8,9 @@ export type InputProps = {
 } & React.InputHTMLAttributes<HTMLInputElement>
 
 const Label = styled.p`
-  color: #828282;
+  color: var(--color-grey1);
   padding: 0 5px;
-  background-color: #FFF;
+  background-color: var(--color-white);
   font-size: 12px;
   font-weight: 400;
   position: absolute;
@@ -29,14 +29,14 @@ const StyledInput = styled.input`
   overflow: hidden;
 
   &::placeholder {
-    color: #CDCAD0;
+    color: var(--color-grey3);
   }
 `
 
 const InputWrapper = styled.div<Pick<InputProps, 'isError'>>`
   height: 50px;
-  background: #FFFFFF;
-  border: 2px solid #E3E3E3;
+  background: var(--color-white);
+  border: 2px solid var(--color-grey2);
   border-radius: 8px;
   position: relative;
   transition: .25s;
@@ -45,10 +45,10 @@ const InputWrapper = styled.div<Pick<InputProps, 'isError'>>`
   ${props => {
     if (props.isError) {
       return `
-        border-color: #EB5E55;
+        border-color: var(--color-red);
         
         ${Label} {
-          color: #EB5E55;
+          color: var(--color-red);
         }
       `
     }
@@ -56,11 +56,11 @@ const InputWrapper = styled.div<Pick<InputProps, 'isError'>>`
     if (!props.isError) {
       return `
         &:focus-within {
-          border-color: #0086A8;
+          border-color: var(--color-blue);
         }
 
         &:focus-within ${Label} {
-          color: #0086A8;
+          color: var(--color-blue);
         }
       `
     }
@@ -68,7 +68,7 @@ const InputWrapper = styled.div<Pick<InputProps, 'isError'>>`
 `
 
 const ErrorLabel = styled.p`
-  color: #EB5E55;
+  color: var(--color-red);
   margin-top: 8px;
   font-size: 12px;
   font-weight: 400;
