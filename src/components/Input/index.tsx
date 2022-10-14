@@ -56,11 +56,11 @@ const InputWrapper = styled.div<Pick<InputProps, 'isError'>>`
     if (!props.isError) {
       return `
         &:focus-within {
-          border-color: var(--color-blue);
+          border-color: var(--color-blue1);
         }
 
         &:focus-within ${Label} {
-          color: var(--color-blue);
+          color: var(--color-blue1);
         }
       `
     }

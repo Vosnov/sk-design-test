@@ -9,7 +9,7 @@ type ButtonProps = {
 
 const StyledButton = styled.button<ButtonProps>`
   color: var(--color-white);
-  background-color: var(--color-blue);
+  background-color: var(--color-blue1);
   padding: 0 25px;
   height: 50px;
   border-radius: 8px;
@@ -24,10 +24,10 @@ const StyledButton = styled.button<ButtonProps>`
     if (props.isLoading) return '' 
     return `
       &:hover {
-        background-color: #007693;
+        background-color: var(--color-blue2);
       };
       &:active {
-        background-color: #00657E;
+        background-color: var(--color-blue3);
       }
       &:disabled {
         background-color: var(--color-grey2);

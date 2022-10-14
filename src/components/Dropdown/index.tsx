@@ -23,9 +23,9 @@ const Select = styled.button<SelectWrapperProps>`
   ${props => {
     if (props.isActive && !props.isError) {
       return `
-        border-color: var(--color-blue);
+        border-color: var(--color-blue1);
         ${Label} {
-          color: var(--color-blue);
+          color: var(--color-blue1);
         }
       `
     }
