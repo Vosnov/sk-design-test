@@ -5,14 +5,15 @@ export const Layout = styled.div`
   display: flex;
   gap: 60px;
   max-width: 1440px;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 16px auto;
   flex-direction: column;
   max-width: 90%;
 
   @media ${device.tablet} {
+    margin: auto;
     max-width: ${size.mobileL};
   }
 
