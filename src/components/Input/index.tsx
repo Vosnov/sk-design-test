@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { ErrorLabel } from '../ErrorLabel'
 
 export type InputProps = {
   isError?: boolean
@@ -65,13 +66,6 @@ const InputWrapper = styled.div<Pick<InputProps, 'isError'>>`
       `
     }
   }}
-`
-
-const ErrorLabel = styled.p`
-  color: var(--color-red);
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 400;
 `
 
 const Wrapper = styled.div`

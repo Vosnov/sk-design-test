@@ -1,6 +1,7 @@
 import React, { FC, MouseEventHandler, useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Arrow } from '../Arrow'
+import { ErrorLabel } from '../ErrorLabel'
 
 const Wrapper = styled.div`
   position: relative;
@@ -78,13 +79,6 @@ const Label = styled.p`
   position: absolute;
   top: -10px;
   left: 10px;
-`
-
-const ErrorLabel = styled.p`
-  color: var(--color-red);
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 400;
 `
 
 export type Option = {
