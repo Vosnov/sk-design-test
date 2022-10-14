@@ -43,8 +43,8 @@ export const SlideDown: FC<Props> = ({children, label}) => {
   return (
     <Wrapper>
       <Head>
-        <Label>{label}</Label>
         <Button type="button" onClick={onToggle}>
+          <Label>{label}</Label>
           <Arrow isOpen={isOpen} />
         </Button>
       </Head>

@@ -9,27 +9,47 @@ import * as Yup from 'yup';
 import { TelephoneInput } from "../../components/InputNumber";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { FormData, formFetchSubmit } from "../../store/reducers/form";
+import { device } from "../../appConstants/media";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 40px 30px;
-  width: 440px;
+  width: 100%;
   background: var(--color-white);
   box-shadow: 0px 5px 20px rgba(53, 50, 56, 0.14);
   border-radius: 8px;
   gap: 20px;
+
+  @media ${device.tablet} {
+    width: 440px;
+  }
 `
 
 const Row = styled.div`
   display: flex;
   gap: 20px;
   width: 100%;
+  flex-direction: column;
+
+  @media ${device.mobileL} {
+    flex-direction: row;
+  }
 `
 
 const SlideRow = styled.div`
   margin-top: 20px;
   display: flex;
+`
+
+const StyledForm = styled.form`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media ${device.tablet} {
+    width: initial;
+  }
 `
 
 const formSchema = Yup.object().shape({
@@ -68,7 +88,7 @@ export const Form: FC = () => {
   })
   
   return (
-    <form onReset={handleReset} onSubmit={handleSubmit}>
+    <StyledForm onReset={handleReset} onSubmit={handleSubmit}>
       <Wrapper>
         <Row>
           <Input 
@@ -150,6 +170,6 @@ export const Form: FC = () => {
           <Button disabled={!isValid} isLoading={isLoading} type="submit">Отправить заявку</Button>
         </Row>
       </Wrapper>
-    </form>
+    </StyledForm>
   )
 }
